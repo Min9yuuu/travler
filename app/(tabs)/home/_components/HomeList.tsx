@@ -59,7 +59,6 @@ export default function HomeList({ initialPosts, userId, take }: HomeListProps) 
           </span>
         ) : null}
       </div>
-      <div className="min-h-screen"></div>
     </>
   );
 }
