@@ -8,6 +8,7 @@ import { formatToTimeAgo } from '@/lib/utils';
 import { RealtimeChannel, createClient } from '@supabase/supabase-js';
 import { saveMessage } from '../[id]/actions';
 import BackBtn from '@/app/_components/BackBtn';
+import ChatBackBtn from '@/app/_components/ChatBackBtn';
 
 interface ChatMessageListProps {
   initialMessages: InitialChatMessages;
@@ -74,7 +75,7 @@ export default function ChatMessageList({ initialMessages, userId, chatRoomId, u
   return (
     <>
       <div className="pb-5 ml-5 flex flex-col min-h-screen justify-between">
-        <BackBtn />
+        <ChatBackBtn />
         <div className="flex flex-col gap-5">
           {messages.map((message) => (
             <div key={message.id} className={`flex gap-2 items-start ${message.userId === userId ? 'justify-end' : ''}`}>
