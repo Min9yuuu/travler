@@ -41,7 +41,7 @@ export default async function PostDetailContainer({ paramsId }: { paramsId: stri
         </div>
         <div className="flex flex-col gap-2 p-3">
           <span className="font-bold text-2xl">{post.title}</span>
-          <pre>{post.content}</pre>
+          <pre className=" whitespace-pre-line">{post.content}</pre>
         </div>
         <LikeContainer isLiked={isLiked} likeCount={likeCount} postId={id} userId={userId!} commentCount={comments.length} views={post.views} />
         <CommentsContainer postId={post.id} userId={userId!} user={loginUser!} comments={comments} />
